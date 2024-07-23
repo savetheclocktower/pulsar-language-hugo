@@ -1,0 +1,19 @@
+{
+  "name": "pulsar-language-hugo",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Support for Go Templates as used by Hugo",
+  "keywords": [
+    "hugo",
+    "golang",
+    "tree-sitter",
+    "grammar"
+  ],
+  "repository": "https://github.com/savetheclocktower/pulsar-language-hugo",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

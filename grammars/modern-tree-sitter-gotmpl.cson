@@ -1,0 +1,16 @@
+name: 'Go Template'
+scopeName: 'text.html.gotmpl'
+type: 'modern-tree-sitter'
+parser: 'tree-sitter-go-template'
+
+fileTypes: ['gotmpl']
+
+injectionRegex: '^(gotmpl|GOTMPL|hugo|HUGO)$'
+
+treeSitter:
+  parserSource: 'github:ngalaiko/tree-sitter-go-template#9d3f6e526dd074b9edae9070b7bb778f00e87a5b'
+  grammar: 'tree-sitter/tree-sitter-gotmpl.wasm'
+  highlightsQuery: 'tree-sitter/highlights.scm'
+  foldsQuery: 'tree-sitter/folds.scm'
+  indentsQuery: 'tree-sitter/indents.scm'
+  tagsQuery: 'tree-sitter/tags.scm'

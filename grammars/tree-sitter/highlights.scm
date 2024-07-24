@@ -1,3 +1,29 @@
+; EMBEDDED
+; ========
+
+((action) @meta.embedded.line.gotmpl
+  (#is? test.endsOnSameRowAs startPosition))
+
+((action) @meta.embedded.block.gotmpl
+  (#is-not? test.endsOnSameRowAs startPosition))
+
+([(if_start) (else_if_start) (else_start) (if_end)] @meta.embedded.line.conditional.gotmpl
+  (#is? test.endsOnSameRowAs startPosition))
+([(if_start) (else_if_start) (else_start) (if_end)] @meta.embedded.block.conditional.gotmpl
+  (#is-not? test.endsOnSameRowAs startPosition))
+
+([(range_start) (range_end)] @meta.embedded.line.range.gotmpl
+  (#is? test.endsOnSameRowAs startPosition))
+
+([(range_start) (range_end)] @meta.embedded.block.range.gotmpl
+  (#is-not? test.endsOnSameRowAs startPosition))
+
+([(with_start) (with_end)] @meta.embedded.line.with.gotmpl
+  (#is? test.endsOnSameRowAs startPosition))
+
+([(with_start) (with_end)] @meta.embedded.block.with.gotmpl
+  (#is-not? test.endsOnSameRowAs startPosition))
+
 
 ; IDENTIFIERS
 ; ===========
@@ -89,5 +115,5 @@
 ; PUNCTUATION
 ; ===========
 
-"{{" @punctuation.delimiter.embedded.begin.gotmpl
-"}}" @punctuation.delimiter.embedded.end.gotmpl
+"{{" @punctuation.definition.embedded.begin.gotmpl
+"}}" @punctuation.definition.embedded.end.gotmpl

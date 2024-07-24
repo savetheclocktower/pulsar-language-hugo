@@ -1,11 +1,7 @@
 
-"if" @indent
-("else" @dedent
-  (#set! indent.force true))
-"else" @indent
-("else if" @dedent
-  (#set! indent.force true))
-"else if" @indent
+(if_start) @indent
+(else_start) @dedent @indent
+(else_if_start) @dedent @indent
 
 [
   "range"
@@ -14,5 +10,12 @@
   "block"
 ] @indent
 
-("end" @dedent
-  (#set! indent.force true))
+([
+  (if_end)
+  (with_end)
+  (range_end)
+  (block_end)
+  (define_end)
+] @match
+  (#set! indent.matchIndentOf parent.firstChild.startPosition)
+)

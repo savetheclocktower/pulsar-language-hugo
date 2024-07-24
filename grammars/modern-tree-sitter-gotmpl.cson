@@ -8,7 +8,7 @@ fileTypes: ['gotmpl']
 injectionRegex: '^(gotmpl|GOTMPL|hugo|HUGO)$'
 
 treeSitter:
-  parserSource: 'github:ngalaiko/tree-sitter-go-template#9d3f6e526dd074b9edae9070b7bb778f00e87a5b'
+  parserSource: 'github:savetheclocktower/tree-sitter-go-template#e64a54924093441331266272b903e4b622c84d5f'
   grammar: 'tree-sitter/tree-sitter-gotmpl.wasm'
   highlightsQuery: 'tree-sitter/highlights.scm'
   foldsQuery: 'tree-sitter/folds.scm'
